@@ -1,0 +1,11 @@
+table,th,td{
+    border-collapse : collapse;
+    background-position: center;
+}
+
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
