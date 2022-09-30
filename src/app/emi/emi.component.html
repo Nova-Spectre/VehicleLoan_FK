@@ -1,9 +1,11 @@
 <div style="text-align: center;">
-    Loan Amount:<input type="number"  [(ngModel)]="loanAmount" /><br /><br>
-Tenure in Months:<input type="number"  [(ngModel)]="tenure" /> <br /><br>
-Interest:
-<input type="number"  [(ngModel)]="interest" /><br>
-
-<button (click)="cal()">Calculate</button>
-<h1>EMI:{{ emi | number:'0.2-2'}}/m</h1>
-</div>
+    <b><i>Loan Amount: </i></b><input type="number"  [(ngModel)]="loanAmount" class="type1"/><br /><br>
+    <b><i>Tenure in Months: </i></b><input type="number"  [(ngModel)]="tenure" class="type2"/> <br /><br>
+    <b><i>Interest: </i></b><input type="number"  [(ngModel)]="interest" class="type3" /><br>
+    <br>
+    <button (click)="cal()"  class="btn1">Calculate</button>
+    <br>
+    <br>
+    <i><h1 class="h1">EMI:{{ emi | number:'0.2-2'}}/m</h1></i>
+    </div>
+    

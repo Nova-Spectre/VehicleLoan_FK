@@ -1,0 +1,31 @@
+<div>
+
+    <div class="mt-5">
+      <table class="table table-bordered">
+        <thead>
+          <div><blockquote><h1><p>Details of approved applications</p> </h1> </blockquote> 
+           </div>
+          <tr>
+            <th>Application Details</th>
+            <th>Inputs</th>
+            
+            
+      
+          </tr>
+        </thead>
+        
+        <tbody class="tbody">
+          <tr *ngFor="let student of applicationDetails|keyvalue">
+  
+              <td>{{student.key|json}}</td>
+              <td>{{student.value| json}}</td>
+              
+              
+           
+          </tr>
+          <tr><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

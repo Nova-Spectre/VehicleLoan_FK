@@ -2,7 +2,7 @@ import { Loan } from "./Loan";
 
 export class Vehicle {
     vid!:             number;
-    vname!:           string;
+    vname!:           string ;
     vmodel!:          string;
     showroomprice!:   number;
     onroadprice!:     number;
@@ -14,5 +14,7 @@ export class Vehicle {
     annualsalary!:    number;
     existingemi!:     boolean;
     loan!:            Loan;
+
+    constructor(){}
 
 }

@@ -5,9 +5,12 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
  
   disableLogin = false;
   constructor() { }

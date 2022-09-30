@@ -14,7 +14,9 @@ import { LoginComponent } from './login/login.component';
 import { SchedulerComponent } from './scheduler/scheduler.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { UserComponent } from './user/user.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
 import { VehicledetailsComponent } from './vehicledetails/vehicledetails.component';
+import { ViewComponent } from './view/view.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -29,7 +31,9 @@ const routes: Routes = [
   { path: 'vehicledetails', component:  VehicledetailsComponent, canActivate : [AuthguardGuard]},
   { path: 'loandetails', component:  LoandetailsComponent, canActivate : [AuthguardGuard]},
   { path: 'identitydetails', component:  IdentitydetailsComponent, canActivate : [AuthguardGuard]},
-  {path:'userdashboard',component:UserDashboardComponent}
+  {path:'userdashboard',component:UserDashboardComponent},
+  {path:'Userlogin',component:UserloginComponent},
+  {path:'view',component:ViewComponent}
 
 
 ];

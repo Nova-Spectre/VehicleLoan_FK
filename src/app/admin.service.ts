@@ -13,9 +13,9 @@ export class AdminService {
 
 
   constructor(private http : HttpClient) { }
-  getUserData():Observable<any>{
+  getUserData():Observable<User[]>{
     const url="http://localhost:8088/StudentApp/user";
-    return this.http.get<any>(url)
+    return this.http.get<User[]>(url)
   }
 
   getAprovedListUser():Observable<User[]>{
@@ -28,36 +28,17 @@ export class AdminService {
     return this.http.get<User[]>(url)
   }
 
-  getVehicleData():Observable<any>{
-    const url="http://localhost:8088/StudentApp/user";
-    return this.http.get<Vehicle>(url)
+  getPendingVehicleUser():Observable<Vehicle[]>{
+    const url="http://localhost:8088/StudentApp/Vehicle"
+    return this.http.get<Vehicle[]>(url)
   }
 
-  getAprovedListVehicle():Observable<Vehicle[]>{
-    const url="http://localhost:8088/StudentApp/user/status/approved"
-    return this.http.get<Vehicle[]>(url)
+  private urls="http://localhost:8088/StudentApp/user"
+  putUser(u:User,u_id:number):Observable<Object>{
+    return this.http.put(this.urls+'/'+u_id,User)
   }
 
   
-  getPendingListVehicle():Observable<Vehicle[]>{
-    const url="http://localhost:8088/StudentApp/user/status/pending"
-    return this.http.get<Vehicle[]>(url)
-  }
-
-  getLoanData():Observable<any>{
-    const url="http://localhost:8088/StudentApp/user";
-    return this.http.get<Loan>(url)
-  }
-
-  getAprovedListLoan():Observable<Loan[]>{
-    const url="http://localhost:8088/StudentApp/user/status/approved"
-    return this.http.get<Loan[]>(url)
-  }
-
-  getPendingListLoan():Observable<Loan[]>{
-    const url="http://localhost:8088/StudentApp/user/status/pending"
-    return this.http.get<Loan[]>(url)
-  }
 
 
   

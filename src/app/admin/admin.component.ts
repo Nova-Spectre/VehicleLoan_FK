@@ -11,13 +11,25 @@ import { Vehicle } from '../Vehicle';
 export class AdminComponent implements OnInit {
   
 
-  user?:User[];
-  auser?:User[];
-  puser?:User[];
+  user!:User[];
+  uss:User=new User();
+  u:User=new User();
 
-  vehicle?:Vehicle[];
-  avehicle?:Vehicle[];
-  pvehicle?:Vehicle[];
+////////////
+  auser!:User[];
+  aus:User=new User();
+
+
+
+
+
+  puser!:User[];
+  pus:User=new User();
+
+  /////////////
+  pvehicle!:Vehicle[];
+
+  
 
 
   
@@ -42,26 +54,49 @@ export class AdminComponent implements OnInit {
    }
   ngOnInit() {
     
-  this.getUserdataFromAPi(),
+  // this.getUserdataFromAPi(),
   this.getApprovedUserList(),
   this.getPendingUSerList(),
-  this.getVehicleData(),
-  this.getApprovedVehicleList(),
   this.getPendingVehicleList()
+  
+
+ 
+ 
   }
  
+  getApprove(u_id:number){
+    this.u.status="approved"
+    this.adminservice.putUser(this.u,u_id).subscribe((data)=>{
+      alert('Approved')
+    })
+     // this.adminservice.putUser().subscribe()
+  }
+
+  getPending(u_id:number){
+    this.u.status="pending"
+    this.adminservice.putUser(this.u,u_id).subscribe((data)=>{
+      alert('Rejected')
+    })
+  }
+
+  
 
   getUserdataFromAPi(){
     this.adminservice.getUserData().subscribe(data=>{
       this.user=data
-      console.log(data)
+      console.log(this.user);
+      
     })
   }
 
   getApprovedUserList(){
     this.adminservice.getAprovedListUser().subscribe(data=>{
-      this.auser=data
-      console.log(data)
+      this.auser=data;
+      console.log(this.user);
+      alert(this.auser)
+      // this.aus=data;
+
+      
     })
 
 }
@@ -72,28 +107,27 @@ getPendingUSerList(){
   })
 
 }
+getPendingVehicleList(){
+  this.adminservice.getPendingVehicleUser().subscribe(data=>{
+    this.pvehicle=data
+    console.log(data)
+  })
+}
+
+ 
+// reject(vid:any){
+//   if(confirm('Are you sure?')){
+//     this.adminservice.reject(vid).subscribe(data=>{
+//     console.log(data);
+//     });
+//   }
+  
+
 //
 
-getVehicleData(){
-  this.adminservice.getVehicleData().subscribe(data=>{
-    this.vehicle=data
-    console.log(data)
-  })
-}
 
-getApprovedVehicleList(){
-  this.adminservice.getAprovedListVehicle().subscribe(data=>{
-    this.avehicle=data
-    console.log(data)
-  })
-
-}
-getPendingVehicleList(){
-this.adminservice.getPendingListVehicle().subscribe(data=>{
-  this.pvehicle=data
-  console.log(data)
-})
 
 }
 
-}
+
+

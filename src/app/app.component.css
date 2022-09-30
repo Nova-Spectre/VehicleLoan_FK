@@ -1,11 +1,79 @@
 .jumbotron{
     height: 200px;
+    background-color:#b7e2fc ;
 }
 
 .btn-group{
-    text-align: center;
-    align-content: center;
-    align-items: center;
-    box-align: center;
-    align-self: center;
+    display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #F5F5F5;
+  background-color: #FA8072;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999
+}
+
+.btn1{
+    background-color:#fff;
+    margin-right: 20px;
+}
+.btn1:hover{
+    background-color: #FA8072;
+}
+.btn1:active{
+  background-color: #FA8072;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+}
+.btn2{
+    background-color:#fff;
+    margin-right: 20px;
+}
+.btn2:hover{
+    background-color: #FA8072;
+}
+.btn2:active{
+  background-color: #FA8072;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+}
+.btn3{
+    background-color:#fff;
+    margin-right: 20px;
+}
+.btn3:hover{
+    background-color: #FA8072;
+}
+.btn3:active{
+  background-color: #FA8072;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+}
+.btn4{
+    background-color:#fff;
+    margin-right: 20px;
+}
+.btn4:hover{
+    background-color: #FA8072;
+}
+.btn4:active{
+  background-color: #FA8072;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+}x
+.Home{
+    background-color: #666;
+}
+
+.col-lg{
+    padding-top: 20px;
 }

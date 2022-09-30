@@ -2,6 +2,7 @@ import { Vehicle } from "./Vehicle";
 
 
 export class User {
+    u_id!:number;
     u_name!:   string;
     u_email!:  string;
     mob_no!:   number;
@@ -13,8 +14,8 @@ export class User {
     pincode!:  number;
     address!:  string;
     password!: string;
-    //Vehicle!:Vehicle[];
-    Vehicle=Object.assign({},Vehicle);
+    vid!:number;
+    vehicle!:Vehicle;
 }
 
 

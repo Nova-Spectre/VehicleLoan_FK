@@ -12,12 +12,12 @@ import { AppComponent } from '../app.component';
 })
 export class LoginComponent implements OnInit {
 
-  username : string | undefined;
-  showMsgpassword : boolean| undefined;
-  showMsgusername : boolean| undefined;
-  showMsg : boolean| undefined;
-  user : string| undefined;
-  editUser : string| undefined;
+  username! : string ;
+  showMsgpassword! : boolean;
+  showMsgusername!: boolean;
+  showMsg !: boolean;
+  user !: string;
+  editUser! : string;
 
  constructor(private router : Router , private loginService : LoginService , private appComponent : AppComponent) { }
 
